@@ -12,7 +12,7 @@ export const Layout = () => {
             <LayoutMainBox>
                 {token ? (<>
                     <LayoutList>
-                        <LayoutItem><LayoutNavLink to="/">Add contact</LayoutNavLink></LayoutItem>
+                        <LayoutItem><LayoutNavLink to="/" >Add contact</LayoutNavLink></LayoutItem>
                         <LayoutItem><LayoutNavLink to="/contacts">Phonebook</LayoutNavLink></LayoutItem>
                     </LayoutList>
                     <UserMenu/>

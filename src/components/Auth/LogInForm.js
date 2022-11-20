@@ -4,7 +4,6 @@ import { onLogIn } from "redux/authorization/operations"
 export const LogInForm = () => {
     const dispatch = useDispatch()
 
-    
     const logIn = (evt) => {
         evt.preventDefault()
         const email = evt.target.elements.email.value
