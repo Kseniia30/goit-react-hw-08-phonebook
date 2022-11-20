@@ -2,6 +2,8 @@ import { useDispatch } from "react-redux"
 import { onSignUp } from "redux/authorization/operations"
 import {Form, Label, Input, BTN } from "../Form.styled"
 
+
+
 const SignUpForm = () => {
     const dispatch = useDispatch()
 
