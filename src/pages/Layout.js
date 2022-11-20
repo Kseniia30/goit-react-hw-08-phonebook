@@ -2,7 +2,7 @@ import { UserMenu } from "components/Auth/UserMenu"
 import { useSelector } from "react-redux"
 import { Outlet } from "react-router-dom"
 import { tokenInfo } from "redux/authorization/selectors"
-import {LayoutBox, LayoutMainBox, LayoutList, LayoutItem, LayoutNavLink, BgImg} from "./Pages.styled"
+import {LayoutLoggedBox, LayoutBox, LayoutMainBox, LayoutList, LayoutItem, LayoutNavLink, BgImg} from "./Pages.styled"
 
 export const Layout = () => {
     const token = useSelector(tokenInfo)
@@ -10,13 +10,13 @@ export const Layout = () => {
     return (
         <LayoutBox>
             <LayoutMainBox>
-                {token ? (<>
+                {token ? (<LayoutLoggedBox>
                     <LayoutList>
-                        <LayoutItem><LayoutNavLink to="/" >Add contact</LayoutNavLink></LayoutItem>
+                        <LayoutItem><LayoutNavLink to="/addcontacts" >Add contact</LayoutNavLink></LayoutItem>
                         <LayoutItem><LayoutNavLink to="/contacts">Phonebook</LayoutNavLink></LayoutItem>
                     </LayoutList>
                     <UserMenu/>
-                </>) : 
+                </LayoutLoggedBox>) : 
                     (<LayoutList>
                         <LayoutItem><LayoutNavLink to="/login">Log in</LayoutNavLink></LayoutItem>
                         <LayoutItem><LayoutNavLink to="/signup">sign up</LayoutNavLink></LayoutItem>

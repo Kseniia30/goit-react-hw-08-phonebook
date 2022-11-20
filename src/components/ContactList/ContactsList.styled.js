@@ -1,10 +1,5 @@
 import styled from "styled-components"
 
-const ContactListLabel = styled.label`
-    font-weight: 700;
-    font-size: 20px;
-    color: #2196f3;
-`
 const ContactListInput = styled.input`
     height: 25px;
     border-radius: 0 5px;
@@ -38,4 +33,4 @@ const NoContacts = styled.p`
     font-size: 20px;
 `
 
-export {ContactListLabel, ContactListInput, ContactItem, DeleteBTN, NoContacts}
+export {ContactListInput, ContactItem, DeleteBTN, NoContacts}

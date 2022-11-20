@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addContact, fetchContacts } from "redux/operations"
 import { getContacts } from "redux/selectors"
-import { AddForm, AddLabel, AddInput, AddBTN } from "./AddContacts.styled"
+import {Form, Label, Input, BTN } from "../Form.styled"
 import Notiflix from 'notiflix';
 
 export const AddContact = () => {
@@ -30,25 +30,25 @@ export const AddContact = () => {
         form.reset()
     }
     return (
-        <AddForm onSubmit={submit}>
-            <AddLabel>Name
-                <AddInput
+        <Form onSubmit={submit}>
+            <Label>Name
+                <Input
                     type="text"
                     name="name"
                     pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                     title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                     required/>
-            </AddLabel>
-            <AddLabel>Number
-                <AddInput
+            </Label>
+            <Label>Number
+                <Input
                     type="tel"
                     name="number"
                     pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                     title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                     required/>
-            </AddLabel>
-            <AddBTN type="submit">Add contact</AddBTN>
-        </AddForm>
+            </Label>
+            <BTN type="submit">Add contact</BTN>
+        </Form>
     )
 }
 

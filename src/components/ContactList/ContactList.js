@@ -3,8 +3,9 @@ import {  useDispatch, useSelector } from "react-redux";
 import { deleteContact, fetchContacts } from "redux/operations"
 import { getContacts, filteredContacts } from "redux/selectors"
 import { findContact } from "redux/slice"
-import { ContactListLabel, ContactListInput, ContactItem, DeleteBTN, NoContacts } from "./ContactsList.styled"
+import { ContactListInput, ContactItem, DeleteBTN, NoContacts } from "./ContactsList.styled"
 import Notiflix from 'notiflix';
+import {Label } from "../Form.styled"
 
 export const ContactList = () => {
     const contacts = useSelector(getContacts)
@@ -30,7 +31,7 @@ export const ContactList = () => {
     }
     return (
         <>
-            <ContactListLabel>Find contacts by name
+            <Label>Find contacts by name
                 <ContactListInput
                     id="searchInput"
                     type="text"
@@ -40,7 +41,7 @@ export const ContactList = () => {
                     pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])[a-zA-Zа-яА-Я]*)*$"
                     title="Name may contain only letters, apostrophe, dashand spaces. For example Adrian, Jacob Mercer, Charlesde Batz de Castelmore d'Artagnan"
                     required/>
-                </ContactListLabel>
+                </Label>
             {filtering().length !== 0 ?  
                 (<ul>
                     {filtering().map(contact => {

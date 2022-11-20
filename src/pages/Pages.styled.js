@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom"
 import styled from "styled-components"
 
+const LayoutLoggedBox = styled.div`
+    display: flex;
+    align-items: center;
+`
 
 const LayoutBox = styled.div`
     display: flex;
@@ -50,4 +54,4 @@ export const PagesToptext = styled.h1`
     text-shadow: red 1px 1px 1px, red 2px 2px 1px;
 `
 
-export {LayoutBox, LayoutMainBox, LayoutList, LayoutItem, LayoutNavLink, BgImg}
+export {LayoutLoggedBox, LayoutBox, LayoutMainBox, LayoutList, LayoutItem, LayoutNavLink, BgImg}

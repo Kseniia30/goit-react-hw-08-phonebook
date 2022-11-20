@@ -1,18 +1,18 @@
 import styled from "styled-components"
 
-const AddForm = styled.form`
+const Form = styled.form`
     width: 400px;
     text-align: center;
 `
 
-const AddLabel = styled.label`
+const Label = styled.label`
     font-weight: 700;
     font-size: 25px;
     color: #2196f3;
 }
 `
 
-const AddInput = styled.input`
+const Input = styled.input`
     width: 100%;
     height: 25px;
     border-radius: 0 5px;
@@ -26,7 +26,7 @@ const AddInput = styled.input`
     }
 `
 
-const AddBTN = styled.button`
+const BTN = styled.button`
     padding: 10px 20px;
     border-radius: 0 5px;
     border: none;
@@ -35,4 +35,4 @@ const AddBTN = styled.button`
     font-weight: 700;
 `
 
-export {AddForm, AddLabel, AddInput, AddBTN}
+export {Form, Label, Input, BTN }
