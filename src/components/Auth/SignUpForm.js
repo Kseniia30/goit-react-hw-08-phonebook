@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux"
 import { onSignUp } from "redux/authorization/operations"
 import {Form, Label, Input, BTN } from "../Form.styled"
 
-export const SignUpForm = () => {
+const SignUpForm = () => {
     const dispatch = useDispatch()
 
     const signUp = (evt) => {
@@ -27,3 +27,5 @@ export const SignUpForm = () => {
         <BTN type="submit">Sign up</BTN>
     </Form>
 }
+
+export default SignUpForm

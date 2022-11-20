@@ -18,8 +18,8 @@ export const Layout = () => {
                     <UserMenu/>
                 </LayoutLoggedBox>) : 
                     (<LayoutList>
-                        <LayoutItem><LayoutNavLink to="/login">Log in</LayoutNavLink></LayoutItem>
-                        <LayoutItem><LayoutNavLink to="/signup">sign up</LayoutNavLink></LayoutItem>
+                        <LayoutItem><LayoutNavLink to="/">Log in</LayoutNavLink></LayoutItem>
+                        <LayoutItem><LayoutNavLink to="/signup">Sign up</LayoutNavLink></LayoutItem>
                     </LayoutList>)}
                 <Outlet/>
             </LayoutMainBox>

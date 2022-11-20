@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux"
 import { onLogIn } from "redux/authorization/operations"
 import {Form, Label, Input, BTN } from "../Form.styled"
 
-export const LogInForm = () => {
+const LogInForm = () => {
     const dispatch = useDispatch()
 
     const logIn = (evt) => {
@@ -23,3 +23,4 @@ export const LogInForm = () => {
         <BTN type="submit">Log in</BTN>
     </Form>
 }
+export default LogInForm
